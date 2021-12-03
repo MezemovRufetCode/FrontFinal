@@ -40,13 +40,31 @@ header{
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
-                ul{
+                .mainList{
                     display: flex;
                     margin: 0px;
-                    li{
+                    padding: 0px;
+                    .mlistEl{
+                        position: relative;
+                        line-height: 20px;
                         list-style: none;
                         padding: 0px 29px;
+                        ul.sub{
+                            list-style: none;
+                            padding: 0px;
+                            display: none;
+                            position: absolute;
+                            width: 120px;
+                            li{
+                                position: relative;
+                                ul.sub{
+                                    top: 0px;
+                                    left: 130px;
+                                }
+                            }
+                        }
                         a{
+                            display: block;
                             text-decoration: none;
                             color: black;
                             font-family: 'Encode Sans', sans-serif;
