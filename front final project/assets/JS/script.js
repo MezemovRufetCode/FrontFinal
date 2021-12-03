@@ -20,8 +20,6 @@ $(document).ready(function () {
   $(".menu-links .sub").hide();
   $(".mlist").click(function () {
     $(this).find(".rightIcn").toggleClass("ndeg udeg");
-    // let next = $(this).next();
-    // $(".answer").not(next).slideUp();
     $(this).next(".sub").slideToggle(200);
   });
 });

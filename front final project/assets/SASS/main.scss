@@ -41,42 +41,68 @@ header{
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
-                .mainList{
+                ul{
                     display: flex;
                     margin: 0px;
                     padding: 0px;
-                    .mlistEl{
+                    width: calc();
+                    li{
+                        background:white;
                         position: relative;
                         line-height: 20px;
                         list-style: none;
-                        padding: 0px 29px;
-                        ul.sub{
-                            line-height: 30px;
-                            list-style: none;
-                            padding: 0px;
-                            display: none;
-                            position: absolute;
-                            width: 120px;
-                            li{
-                                line-height: 30px;
-                                position: relative;
-                                ul.sub{
-                                    top: 0px;
-                                    left: 130px;
-                                }
-                            }
-                        }
+                        display: inline-block;
                         a{
-                            display: block;
+                            display: block;                         
                             text-decoration: none;
                             color: black;
                             font-family: 'Encode Sans', sans-serif;
                             letter-spacing: 2px;
                             font-size: 75%;
                             font-weight: 500;
+                            padding: 0 25px;
+                            height: 100%;
+                            line-height: 40px;
                         }
+                        ul{                          
+                            list-style: none;
+                            padding: 0px;
+                            display: none;
+                            position: absolute;
+                            // sub menyularin altdan baslamasi ucun,amma arada bosluq yarandigi ucun sub menular baglanir
+                            // top: 60px; 
+                            li{
+                                line-height: 30px;
+                                position: relative;
+                                display: list-item;
+                                width: 200px;
+                                ul{
+                                    left: 200px;
+                                    li{
+                                        position: relative;
+                                        top: -40px;
+                                    }
+                                }
+                            }
+                        }
+                        
                     }
                 }
+                
+                // nav ul li:hover > ul{
+                //     display: block;
+                // }
+                // nav ul ul li{
+                //     width: 150px;
+                //     float: none;
+                //     display: list-item;
+                //     position: relative;
+                // }
+                // nav ul ul ul li{
+                //     position: relative;
+                //     top: -60px;
+                //     left: 150px;
+                // }
             }
             .littleservices{
                 display: flex;
@@ -210,15 +236,19 @@ header{
 // }
 @media screen and (max-width: 1200px){
     header{
-        .container{
-            .row{
-               .nav-links{
-                .mainList{
-                    .mlistEl{
-                        padding: 0px 17px;
+        .nav{
+            .container{
+                .row{
+                    .nav-links{
+                        ul{
+                            li{
+                                a{
+                                    padding: 0px 17px;
+                                }
+                            }
+                        }
                     }
                 }
-               } 
             }
         }
     }
