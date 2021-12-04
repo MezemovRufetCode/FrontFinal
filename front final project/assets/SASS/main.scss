@@ -13,7 +13,7 @@ header{
     background-color: #fff;
     position: sticky;
     top:0px;
-    z-index: 1000;
+    z-index: 10000;
     .container{
         padding-top: 30px;
         padding-bottom: 30px;
@@ -58,6 +58,9 @@ header{
                         line-height: 20px;
                         list-style: none;
                         display: inline-block;
+                        // &:hover>ul{
+                        //     display: block;
+                        // }
                         a{
                             display: block;                         
                             text-decoration: none;
@@ -252,20 +255,21 @@ header{
             }
         }
 }
-
 #experts{
     .container{
         text-align: center;
         h1{
             padding-top:100px;
-            font-family: serif;
-            font-size: 40px;
+            font-weight: 400; 
+            line-height: 40px;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
         }
         .info{
             margin: 18px 0 0;
             font-size: 18px;
             color: #6d6a6a;
-            font-family: serif;
+            font-family: 'Playfair Display', serif;
             line-height: 29px;
         }
         .row{
@@ -298,8 +302,119 @@ header{
         }
     }
 }
-
-
+#subscribe{
+    padding-top: 140px;
+    .Subscribe{
+        min-height: 500px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3{
+            text-align: center;
+            color: white;
+            font-weight: 400; 
+            line-height: 40px;
+            font-size: 30px;
+            font-family: 'Playfair Display', serif;
+            padding: 20px 20px;
+        } 
+        .beeingsubs{
+            .subsEmail{
+                width: 450px;
+                padding: 17px 18px;;
+                border: 1px solid rgb(230, 229, 229);
+                border-right: 0px;
+                outline: none;
+                &::-webkit-input-placeholder{
+                    color: #959595;
+                    font-weight: 300;
+                }
+            }
+            .subEmbtn{
+                height: 61px;
+                padding: 0px 42px;
+                font-size: 12px;
+                color: white;
+                font-weight: 500;
+                letter-spacing: 1px; 
+                font-family: 'Montserrat', sans-serif;
+                position: relative;
+                left: -5px;
+                bottom: 2px;
+                border: 1px solid transparent;
+                background-color: #f34f3f; 
+            }
+        }
+      
+    }
+}
+#blogposts{
+    background-color: #f7f7f7;
+    padding-top: 110px;
+    .container{
+        text-align: center;
+        .blogUp{
+            h3{
+                font-weight: 400; 
+                line-height: 40px;
+                font-family: 'Playfair Display', serif;
+                font-size: 36px;
+            }
+            p{
+                margin-top: 30px;
+                font-weight: 400; 
+                line-height: 40px;
+                font-family: 'Playfair Display', serif;
+                color:#6d6a6a ;
+            }
+        }
+        .row{
+            .blog{
+                .img{
+                    max-width: 100%;
+                    height: auto;
+                    margin-top: 30px;
+                }
+                .heading{
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        h4{
+                            text-align: center;
+                            padding-top: 28px;
+                            font-family: 'Playfair Display', serif;
+                            font-size: 20px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .info{
+                    margin: 0 20px;
+                    font-family: 'Playfair Display', serif;
+                    text-align: center;
+                    padding-top: 8px;
+                    color: #737373;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1400px){
+    #blogposts{
+        .Subscribe{
+          .container{
+              .row{
+                  .blog{
+                      .img{
+                        width: 354px;
+                      }
+                  }
+              }
+          }  
+        }
+    }
+}
 @media screen and (max-width: 1200px){
     header{
         .nav{
@@ -344,8 +459,21 @@ header{
             }
         }
     }
-}
+    #blogposts{
+        .Subscribe{
+          .container{
+              .row{
+                  .blog{
+                      .img{
+                        width: 304px;
+                      }
+                  }
+              }
+          }  
+        }
+    }
 
+}
 @media screen and (max-width: 1025px){
     header{
         border-bottom: 1px solid #e8e8e8;
@@ -373,6 +501,7 @@ header{
             .row{
                .menuIcon{
                    display: flex;
+                   flex-wrap: wrap;
                    align-items: center;
                    justify-content: flex-end;
                } 
@@ -388,8 +517,6 @@ header{
             }
         }
     }
-    
-
 }
 @media screen and (max-width: 992px){
 #valentine{
@@ -409,7 +536,23 @@ header{
           .row{
               .movie{
                   iframe{
-                      height: 330px;
+                      height: 400px;
+                  }
+              }
+          }  
+        }
+    }
+}
+@media screen and (max-width: 668px){
+    #subscribe{
+        .Subscribe{
+          .content{
+            h3{
+                font-size: 25px;
+            }
+              .beeingsubs{
+                  .subsEmail{
+                      width: 220px;
                   }
               }
           }  
@@ -423,6 +566,26 @@ header{
               .movie{
                   iframe{
                       height: 250px;
+                  }
+              }
+          }  
+        }
+    }
+}
+@media screen and (max-width: 490px){
+    #subscribe{
+        .Subscribe{
+          .content{
+              .beeingsubs{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                  .subsEmail{
+                      width: 320px;
+                  }
+                  .subEmbtn{
+                      margin-top: 25px;
                   }
               }
           }  

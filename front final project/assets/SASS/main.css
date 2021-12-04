@@ -18,7 +18,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 header .container {
@@ -309,15 +309,17 @@ header .container .row .menu .menu-links ul li a {
 
 #experts .container h1 {
   padding-top: 100px;
-  font-family: serif;
-  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
 }
 
 #experts .container .info {
   margin: 18px 0 0;
   font-size: 18px;
   color: #6d6a6a;
-  font-family: serif;
+  font-family: 'Playfair Display', serif;
   line-height: 29px;
 }
 
@@ -358,6 +360,119 @@ header .container .row .menu .menu-links ul li a {
   color: #afafaf;
 }
 
+#subscribe {
+  padding-top: 140px;
+}
+
+#subscribe .Subscribe {
+  min-height: 500px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#subscribe .Subscribe h3 {
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  line-height: 40px;
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+  padding: 20px 20px;
+}
+
+#subscribe .Subscribe .beeingsubs .subsEmail {
+  width: 450px;
+  padding: 17px 18px;
+  border: 1px solid #e6e5e5;
+  border-right: 0px;
+  outline: none;
+}
+
+#subscribe .Subscribe .beeingsubs .subsEmail::-webkit-input-placeholder {
+  color: #959595;
+  font-weight: 300;
+}
+
+#subscribe .Subscribe .beeingsubs .subEmbtn {
+  height: 61px;
+  padding: 0px 42px;
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  left: -5px;
+  bottom: 2px;
+  border: 1px solid transparent;
+  background-color: #f34f3f;
+}
+
+#blogposts {
+  background-color: #f7f7f7;
+  padding-top: 110px;
+}
+
+#blogposts .container {
+  text-align: center;
+}
+
+#blogposts .container .blogUp h3 {
+  font-weight: 400;
+  line-height: 40px;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+}
+
+#blogposts .container .blogUp p {
+  margin-top: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  font-family: 'Playfair Display', serif;
+  color: #6d6a6a;
+}
+
+#blogposts .container .row .blog .img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+
+#blogposts .container .row .blog .heading a {
+  text-decoration: none;
+  color: black;
+}
+
+#blogposts .container .row .blog .heading a h4 {
+  text-align: center;
+  padding-top: 28px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#blogposts .container .row .blog .info {
+  margin: 0 20px;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  padding-top: 8px;
+  color: #737373;
+}
+
+@media screen and (max-width: 1400px) {
+  #blogposts .Subscribe .container .row .blog .img {
+    width: 354px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   header .nav .container .row .nav-links ul li a {
     padding: 0px 17px;
@@ -367,6 +482,9 @@ header .container .row .menu .menu-links ul li a {
   }
   header .container .row .littleservices .whishlist p i {
     margin-right: 15px;
+  }
+  #blogposts .Subscribe .container .row .blog .img {
+    width: 304px;
   }
 }
 
@@ -388,6 +506,8 @@ header .container .row .menu .menu-links ul li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -409,13 +529,44 @@ header .container .row .menu .menu-links ul li a {
 
 @media screen and (max-width: 770px) {
   #valentine .container .row .movie iframe {
-    height: 330px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  #subscribe .Subscribe .content h3 {
+    font-size: 25px;
+  }
+  #subscribe .Subscribe .content .beeingsubs .subsEmail {
+    width: 220px;
   }
 }
 
 @media screen and (max-width: 500px) {
   #valentine .container .row .movie iframe {
     height: 250px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  #subscribe .Subscribe .content .beeingsubs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #subscribe .Subscribe .content .beeingsubs .subsEmail {
+    width: 320px;
+  }
+  #subscribe .Subscribe .content .beeingsubs .subEmbtn {
+    margin-top: 25px;
   }
 }
 /*# sourceMappingURL=main.css.map */

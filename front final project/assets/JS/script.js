@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // open close menu side
   $(".menuIcon i").click(function () {
     $(".menu").addClass("active");
   });
@@ -6,6 +7,7 @@ $(document).ready(function () {
     $(".menu").removeClass("active");
   });
 
+  //dropdown slide
   $(function () {
     $(".nav-links ul li").hover(
       function () {
@@ -17,9 +19,15 @@ $(document).ready(function () {
     );
   });
 
+  //dropdown icon rotate
   $(".menu-links .sub").hide();
   $(".mlist").click(function () {
     $(this).find(".rightIcn").toggleClass("ndeg udeg");
     $(this).next(".sub").slideToggle(200);
+  });
+
+  // parallax
+  $(".parallax-window").parallax({
+    imageSrc: "./assets/images/h3-background-img.jpg",
   });
 });
