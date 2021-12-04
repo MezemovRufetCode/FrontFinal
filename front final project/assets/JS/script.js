@@ -30,4 +30,39 @@ $(document).ready(function () {
   $(".parallax-window").parallax({
     imageSrc: "./assets/images/h3-background-img.jpg",
   });
+
+  //owl carousel Entrance
+  $("#entrance .owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    dots: true,
+    nav: true,
+
+    autoplay: true,
+    autoplaySpeed: 1000,
+    smartSpeed: 1500,
+
+    responsive: {
+      0: {
+        items: 1,
+      },
+    },
+  });
+
+  //owl Carousel blogpost
+  $("#reviews .owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    dots: false,
+    nav: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    smartSpeed: 1500,
+
+    responsive: {
+      0: {
+        items: 1,
+      },
+    },
+  });
 });
