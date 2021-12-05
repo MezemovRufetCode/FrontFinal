@@ -9,12 +9,12 @@ $(document).ready(function () {
 
   //dropdown slide
   $(function () {
-    $(".nav-links ul li").hover(
+    $(".nav-links li").hover(
       function () {
-        $(">ul.sub:not(:animated)", this).slideDown(500);
+        $(">ul.sub:not(:animated)", this).slideDown(350);
       },
       function () {
-        $(">ul.sub", this).slideUp(150);
+        $(">ul.sub", this).slideUp(70);
       }
     );
   });
@@ -37,7 +37,6 @@ $(document).ready(function () {
     margin: 10,
     dots: true,
     nav: true,
-
     autoplay: true,
     autoplaySpeed: 1000,
     smartSpeed: 1500,
@@ -65,4 +64,30 @@ $(document).ready(function () {
       },
     },
   });
+
+  //product Categoriyaya gore uygunlasdirma
+  let allheadcategory = document.querySelectorAll(".category-title");
+  let allposts = document.querySelectorAll(".posts-collect .all");
+
+  for (let i = 0; i < allheadcategory.length; i++) {
+    allheadcategory[i].addEventListener(
+      "click",
+      filterPosts.bind(this, allheadcategory[i])
+    );
+  }
+
+  function filterPosts(item) {
+    changeActive(item);
+    for (let i = 0; i < allposts.length; i++) {
+      if (allposts[i].classList.contains(item.attributes.id.value)) {
+        allposts[i].style.display = "block";
+      } else allposts[i].style.display = "none";
+    }
+  }
+  function changeActive(activeitem) {
+    for (let i = 0; i < allheadcategory.length; i++) {
+      allheadcategory[i].classList.remove("active");
+    }
+    activeitem.classList.add("active");
+  }
 });
